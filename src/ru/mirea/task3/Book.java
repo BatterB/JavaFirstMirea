@@ -1,4 +1,5 @@
-package ru.mirea.task2;
+package ru.mirea.task3;
+import java.lang.*;
 
 public class Book {
     private String name;
@@ -28,6 +29,6 @@ public class Book {
     }
     public void OutNP()
     {
-        System.out.printf("Book's name is %s and it's size is %d pages\n", name, pages);
+        System.out.printf("Book's name is '%s' and it's size is %d pages\n", name, pages);
     }
 }
