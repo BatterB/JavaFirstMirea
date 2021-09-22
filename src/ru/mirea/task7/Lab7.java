@@ -1,6 +1,13 @@
 package ru.mirea.task7;
 
 public class Lab7 {
+    public static void testInterface(){
+        MovableCircle circle = new MovableCircle(4,1,0,0,4);
+        System.out.println(circle.toString());
+        MovableRectangle rectangle = new MovableRectangle(0,0,3,5,0,0);
+        rectangle.moveDown();
+        System.out.println(rectangle.toString());
+    }
     public static void main(String[] args){
         Shape s1 = new Circle(5.5, "RED", false); // Upcast Circle to Shape
         System.out.println(s1); // which version?
@@ -52,5 +59,7 @@ public class Lab7 {
         System.out.println(sq1.getColor());
         System.out.println(sq1.getSide());
         System.out.println(sq1.getLength());
+
+        testInterface();
     }
 }
