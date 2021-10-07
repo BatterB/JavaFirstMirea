@@ -10,7 +10,7 @@ public class MouseControl extends JFrame {
     JLabel northText = new JLabel("north");
     JLabel southText = new JLabel("south");
     JLabel centerText = new JLabel("  center");
-    JPanel panel = new JPanel();
+
 
 
     public MouseControl(){
@@ -18,12 +18,12 @@ public class MouseControl extends JFrame {
         setDefaultCloseOperation( EXIT_ON_CLOSE);
         setSize(300, 300);
         Container window = getContentPane();
-        panel.add(northText, BorderLayout.NORTH);
-        panel.add(southText, BorderLayout.SOUTH);
-        panel.add(westText, BorderLayout.WEST);
-        panel.add(eastText, BorderLayout.EAST);
-        panel.add(centerText, BorderLayout.CENTER);
-        window.add(panel);
+        window.add(northText, BorderLayout.NORTH);
+        window.add(southText, BorderLayout.SOUTH);
+        window.add(westText, BorderLayout.WEST);
+        window.add(eastText, BorderLayout.EAST);
+        window.add(centerText, BorderLayout.CENTER);
+
 
 
         eastText.addMouseListener(new MouseAdapter() {
@@ -31,6 +31,7 @@ public class MouseControl extends JFrame {
             public void mouseEntered(MouseEvent e) {
                 super.mouseEntered(e);
                 eastText.setText("Welcome to east");
+                JOptionPane.showMessageDialog(null,"Welcome to East");
             }
         });
 
@@ -47,6 +48,7 @@ public class MouseControl extends JFrame {
             public void mouseEntered(MouseEvent e) {
                 super.mouseEntered(e);
                 westText.setText("Welcome to west");
+                JOptionPane.showMessageDialog(null,"Welcome to West");
             }
         });
 
@@ -63,6 +65,7 @@ public class MouseControl extends JFrame {
             public void mouseEntered(MouseEvent e) {
                 super.mouseEntered(e);
                 northText.setText("Welcome to north");
+                JOptionPane.showMessageDialog(null,"Welcome to North");
             }
         });
 
@@ -79,6 +82,7 @@ public class MouseControl extends JFrame {
             public void mouseEntered(MouseEvent e) {
                 super.mouseEntered(e);
                 southText.setText("Welcome to south");
+                JOptionPane.showMessageDialog(null,"Welcome to South");
             }
         });
 
@@ -94,7 +98,8 @@ public class MouseControl extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
                 super.mouseEntered(e);
-                centerText.setText("Welcome to center");
+                centerText.setText("  Welcome to center");
+                JOptionPane.showMessageDialog(null,"Welcome to Center");
             }
         });
 
@@ -102,7 +107,7 @@ public class MouseControl extends JFrame {
             @Override
             public void mouseExited(MouseEvent e) {
                 super.mouseExited(e);
-                eastText.setText("  center");
+                centerText.setText("  center");
             }
         });
 
